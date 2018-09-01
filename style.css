@@ -329,10 +329,9 @@ label {
 	.square-btn {
 		width: 25px;
 		height: 25px;
-		margin: 2.5px;
-	}
-	.circle-icon {
-		font-size: 10px;
+		margin: 0;
+		margin-right: 5px;
+		margin-left: 5px;
 	}
 	.checkmark {
 		width: 21px;
