@@ -121,11 +121,9 @@ const todoItem = ({ text, checked, color, date }) => {
 	const textStyle = () => {
 		if(checkbox.checked) {
 			title.style.textDecoration = "line-through"
-			title.style.fontStyle = "italic"
 			title.style.color = "#adb5bd"
 		} else {
 			title.style.textDecoration = "none"
-			title.style.fontStyle = "normal"
 			title.style.color = "#343a40"
 		}
 	}

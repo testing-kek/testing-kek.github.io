@@ -1,19 +1,30 @@
 * {
-	color: #343a40;
+	color: #455a64;
 }
 
-.main-container {
-	min-height: 100vh;
-	background-color: #343a40;
-	width: 100%;
+body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
 }
 
+label {
+	color: #fff;
+}
+
+.main-container {
+	min-height: 100vh;
+	background: #455a64;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	height: 100%;
+}
+
 .main-wrapper {
-	background-color: rgba(255,255,255, .9);
 	margin-top: 20px;
 	border-radius: 5px;
 	padding: 30px;
@@ -33,6 +44,7 @@
 	flex-direction: row;
 	justify-items: center;
 	align-items: center;
+	border-bottom: 2px solid #fff;
 }
 
 .control-wrapper label {
@@ -41,26 +53,51 @@
 
 .main-list {
 	margin: 0 auto;
+	margin-top: 30px;
 	padding: 0;
 }
 
 .new-task {
 	margin-left: 15px;
 	padding: 5px;
-	border-radius: 5px;
 	outline: none;
-	border: 2px solid black;
+	border: none;
 	background: none;
+	color: #fff;
+}
+
+.add-task {
+	margin: 0;
+	margin-right: 5px;
+	display: block;
+	width: 35px;
+	height: 35px;
+	border-radius: 3px;
+	background: none;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+}
+
+
+.add-task__icon {
+	color: #fff;
+	transition: .5s;
+}
+.add-task__icon:hover {
+	color: #38d9a9;
 }
 
 .date {
 	padding: 5px;
 	font-size: 14px;
-	border-radius: 5px;
 	outline: none;
-	border: 2px solid black;
+	border: none;
+	border-bottom: 2px solid white;
 	background: none;
 	max-width: 70px;
+	color: #fff;
 }
 
 .square-btn {
@@ -70,7 +107,7 @@
 	height: 35px;
 	border-radius: 3px;
 	background: none;
-	border: 2px solid black;
+	border: none;
 	cursor: pointer;
 	outline: none;
 	position: relative;
@@ -86,9 +123,8 @@
 }
 
 .list {
-	border: 1px solid black;
-	border-radius: 5px;
-	margin: 20px;
+	border: none;
+	background: #fff;
 	padding: 3px;
 	padding-left: 15px;
 	min-height: 50px;
@@ -99,6 +135,7 @@
 	align-items: center;
 	opacity: 0;
 	transition: .6s;
+	border-bottom: 1px dashed #455a64;
 }
 
 .list-p {
@@ -107,11 +144,11 @@
 }
 
 .priorSelect {
-	border: 2px solid black;
+	border: none;
+	border-bottom: 2px solid white;
 	background: none;
-	border-radius: 5px;
-	margin-left: 20px;
 	padding: 5px;
+	color: #fff;
 }
 
 .editInput {
@@ -134,7 +171,7 @@
 }
 
 .circle-icon {
-	font-size: 14px;
+	font-size: 20px;
 }
 
 .editInput {
@@ -154,14 +191,16 @@
 
 .now-date {
 	text-align: center;
-	font-size: 24px;
+	font-size: 30px;
 	margin: 0;
 	margin-bottom: 15px;
+	color: #fff;
 }
 
 .now-date span {
 	font-weight: bold;
-	font-size: 24px;
+	font-size: 40px;
+	color: #fff;
 }
 
 .check-container {
@@ -191,23 +230,26 @@
   height: 31px;
   width: 31px;
 	background: none;
-	border: 2px solid #000;
-	border-radius: 3px;
+	border: 2px solid #455a64;
+	border-radius: 5px;
 	transform: translate(0%, -30%);
 }
 
-.check-container:hover input ~ .checkmark {
-  background-color: #ccc;
+.check-container:hover input ~ .checkmark:after {
+	border: solid rgb(173, 181, 189);
+	border-width: 0 3px 3px 0;
 }
 
 .checkmark:after {
   content: "";
   position: absolute;
-  display: none;
+	display: block;
 }
 
 .check-container input:checked ~ .checkmark:after {
-  display: block;
+	display: block;
+	border: solid #455a64;
+	border-width: 0 3px 3px 0;
 }
 
 .check-container .checkmark:after {
@@ -215,7 +257,7 @@
 	top: 5px;
 	width: 7px;
 	height: 14px;
-  border: solid black;
+  border: none;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -315,4 +357,27 @@
 		max-width: 280px;
 		padding: 10px;
 	}
+}
+
+.datepicker__header {
+	border-bottom: 1px solid white;
+	background: inherit;
+}
+
+.datepicker__wrapper {
+	border: 2px solid #455a64;
+	background: #fff;
+}
+
+.datepicker table th {
+	color: #343a40;
+}
+
+.datepicker__prev, .datepicker__next {
+	background-color: #455a64;
+}
+
+
+.datepicker__prev:hover, .datepicker__next:hover {
+	background-color: #343a40;
 }
